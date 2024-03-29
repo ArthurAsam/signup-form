@@ -1,0 +1,46 @@
+@import url("https://fontlibrary.org/face/vintage-propagandist"); 
+
+html, body{
+  padding: 0; 
+  margin: 0; 
+  box-sizing: border-box; 
+
+}
+
+body {
+  border: 2px solid red; 
+  height: 100vh; 
+}
+
+.container{
+  border: 2px solid green;  
+  height: 80vh; 
+  width: 1500px; 
+  margin: auto; 
+}
+
+.sidebar-img{
+  background: url("norse-rock.jpg"); 
+  background-size: 100% 100%; 
+  background-position: right 30%;
+  width: 35%; 
+  height: 100%; 
+  background-repeat: no-repeat; 
+  display: inline-block; 
+  border: 2px solid blue; 
+  position: relative; 
+}
+
+.container .overlay-text {
+  font-family: 'VintagePropagandistRegular';
+  font-weight: normal;
+  font-style: normal;
+  color: white;  
+  font-size: 3rem; 
+  width: 100%; 
+  height: auto; 
+  position: absolute; 
+  top: 20rem;
+  left: 14rem; 
+  
+}
