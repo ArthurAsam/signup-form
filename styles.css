@@ -1,3 +1,10 @@
+:root {
+  --width-percent: 100%; 
+  --height-auto: auto; 
+  --padding-left: 40px; 
+  --stone-color: rgb(91,90,85); 
+}
+
 html, body{
   padding: 0; 
   margin: 0; 
@@ -5,40 +12,183 @@ html, body{
 
 }
 
-body {
-  border: 2px solid red; 
-  height: 100vh; 
-}
-
 .container{
-  border: 2px solid green;  
-  height: 80vh; 
-  width: 1500px; 
-  margin: auto; 
+  border: 1px solid #E5E7EB;  
+  min-height: 800px; 
+  width: 1100px; 
+  margin: 100px auto; 
+  display: flex; 
+  
 }
 
 .sidebar-img{
   background: url("norse-rock.jpg"); 
   background-size: 100% 100%; 
   background-position: right 30%;
-  width: 35%; 
-  height: 100%; 
+  width: 42%; 
+  min-height: var(--width-percent);
   background-repeat: no-repeat; 
-  display: inline-block; 
-  border: 2px solid blue; 
-  position: relative; 
+  position: relative;  
+  flex-shrink: 0; 
 }
 
-.container .overlay-text {
-  font-family: 'VintagePropagandistRegular';
+.overlay-text {
+  font-family: 'vintage propagandist';
   font-weight: normal;
   font-style: normal;
-  color: white;  
-  font-size: 3rem; 
+  color: rgb(133,120,12);  
+  font-size: 5rem;  
   width: 100%; 
   height: auto; 
   position: absolute; 
-  top: 20rem;
-  left: 14rem; 
+  top: 20%;
+  left: 12rem;  
+  margin: 0px auto; 
   
+}
+
+.bg-color-sidebar {
+  position: absolute; 
+  z-index: 2; 
+  top: 220px; 
+  width: 463px;  
+  height: 152px; 
+  background-color: rgb(0,0,0,0.1);
+}
+.odin-logo{
+  position: absolute; 
+  width: 15%; 
+  height: var(--height-auto); 
+  top: 19%; 
+  left: 8rem;  
+  filter: drop-shadow(0px 1000px 0 rgb(133,120,12));
+  transform: translateY(-1000px);
+}
+
+.right-side-wrapper {
+  width: var(--width-percent); 
+}
+
+header {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 600; 
+  font-size: 17px; 
+  background-color: rgb(249,250,251);
+  /* display: inline;  */
+}
+
+.text-wrap {
+  background-color: rgb(249,250,251);
+  padding: 90px 98px 20px 40px; 
+  width: 500px; 
+  height: var(--height-auto);
+}
+
+
+#now,  #know {
+  font-style: italic; 
+  font-weight: 500; 
+}
+
+
+.main-top {
+  font-size: 20px; 
+  color: var(--stone-color); 
+}
+
+form input {
+  width: 200px;
+  height: 20px; 
+  border: 1px solid #E5E7EB; 
+  border-radius: 3px; 
+  margin-bottom: 25px; 
+}
+
+label {
+  font-size: 10px; 
+  color: var(--stone-color); 
+  display: block; 
+}
+
+.main-top, .input-wrapper{
+  padding-left: var(--padding-left) 
+}
+
+.input-wrapper {
+  border-bottom: 1px solid #E5E7EB;
+  box-shadow: 1px 3px 3px #E5E7EB; 
+}
+
+.header-paragraph-1{
+  line-height: 1.5rem; 
+  margin-bottom: 0px; 
+}
+
+.header-paragraph-2{
+  margin-top: 35px; 
+}
+
+.row1, .row2, .row3 {
+  display: flex;  
+  gap: 40px; 
+}
+
+.row3{
+  padding-bottom: 15px
+}
+
+button[type="submit"] {
+  background-color: rgb(133,120,12); 
+  color: var(--stone-color);  
+  border-radius: 5px; 
+  border: none;
+  width: 200px; 
+  height: 35px; 
+  cursor: pointer; 
+}
+
+footer {
+  padding-top: 30px;  
+  padding-left: 40px; 
+}
+
+.account {
+  color: var(--stone-color); 
+}
+
+.login {
+  color: rgb(133,120,12);  
+}
+
+#login {
+  text-decoration: none; 
+}
+
+
+.credit{
+  position: absolute; 
+  top: 760px; 
+  left: 150px; 
+  font-size: 11px; 
+  color: white; 
+}
+
+.credit a {
+  color: white; 
+}
+
+/* form validation */
+form input:valid {
+  border: 1px solid green; 
+  background-color: lightgreen; 
+}
+
+form input:invalid{
+  border: 1px solid crimson; 
+  background-color: lightcoral;       
+}
+
+form input:not(:focus){
+  background-color: inherit;
+  border-color: inherit; 
 }

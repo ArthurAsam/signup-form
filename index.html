@@ -4,17 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up form</title>
-    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/vintage-propagandist" type="text/css"/>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
+        <div class="bg-color-sidebar"></div>
         <div class="sidebar-img">
             <p class="overlay-text">ODIN</p>
+            <img class="odin-logo" src="odin-logo.jpg" alt="viking-head">
+            <p class="credit">Photo by <a href="https://unsplash.com/@traveling_anton?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Anton Poznyak</a> on <a href="https://unsplash.com/photos/black-and-gray-rock-formation-in3-CLQb48A?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+            </p>
         </div>
-        <header></header>
-        <main></main>
-        <footer></footer>
+        <div class="right-side-wrapper">
+            <header>
+                <div class="text-wrap">
+                    <p class="header-paragraph-1">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <span id="now">now</span> to get started.</p>
+                    <p class="header-paragraph-2">You <span id="know">know</span> you want to.</p>
+                </div>    
+            </header>
+            <main>
+                <div class="main-wrapper">
+                    <p class="main-top">Let's do this!</p>
+                    <form action="https://httpbin.org/post" method="post">
+                        <div class="input-wrapper">
+                            <div class="row1">
+                                <div class="input1">
+                                    <label for="first_name">FIRST NAME<span aria-label="required">*</span></label>
+                                    <input type="text" id="first_name" name="first_name" minlength="5" required> 
+                                </div>
+                                
+                                <div class="input2">
+                                    <label for="last_name">LAST NAME<span aria-label="required">*</span></label>
+                                    <input type="text" id="last_name" name="last_name" minlength="5" required>
+                                </div>
+                            </div>
+                            <div class="row2">
+                                <div class="input3">
+                                    <label for="email">EMAIL<span aria-label="required">*</span></label>
+                                    <input type="email" id="email" name="e_mail" placeholder="Johndoe@gmail.com" required>
+                                    
+                                </div>
+                                <div class="input4">
+                                    <label for="phone">PHONE NUMBER<span aria-label="required">*</span></label>
+                                    <input type="tel" id="phone" name="phone_number" placeholder="1234567890" minlength="10" required>
+    
+                                </div>
+                            </div>
+                            <div class="row3">
+                                <div class="input5">
+                                    <label for="password">PASSWORD<span aria-label="required">*</span></label>
+                                    <input type="password" id="password" name="password" minlength="5" maxlength="12" required>
+                                </div>
+                                <div class="input6">
+                                    <label for="confirm">CONFIRM PASSWORD<span aria-label="required">*</span></label>
+                                    <input type="password" id="confirm" name="confirm_pass" minlength="5" maxlength="12" required>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <footer>
+                            <div class="footer-wrapper">
+                                <button type="submit">Create Account</button>
+                                <P class="account">Already have an account? <a href="#" id="login"><span class="login">Log In</span></a></P>
+                            </div>
+                        </footer>
+                    </form>
+                </div>
+            </main>
+        </div>
     </div>
     <script src="app.js"></script>
 </body>
